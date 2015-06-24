@@ -20,7 +20,7 @@
   <mainFile>index.html</mainFile>
   <thumbnailImage>common/images/thumbnail.png</thumbnailImage>
   <accessTokenExpiration>3600</accessTokenExpiration>
-  <userIdentityRealms>DoubleStepAuthRealm</userIdentityRealms>
+  <userIdentityRealms></userIdentityRealms>
   <features></features>
   <android version="0.1">
     <worklightSettings include="false"/>

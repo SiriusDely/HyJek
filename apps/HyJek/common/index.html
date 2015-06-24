@@ -14,38 +14,25 @@
 
   <body style="display: none;">
     <div id="header">
-    <h1>Double Step Adapter Based Authentication</h1>
+    <h1>HyJek</h1>
   </div>
 
   <div id="wrapper">
-    <div id="AppDiv">
-      <input type="button" id="getSecretDataButton" value="Get secret data" onclick="getSecretData()" />
-      <input type="button" class="appButton" value="Logout" onclick="WL.Client.logout('DoubleStepAuthRealm', {onSuccess:WL.Client.reloadApp})" />
-      <div id="ResponseDiv"></div>
-    </div>
+    <p>
+      Your position will appear below. Errors will be displayed in alerts.
+    </p>
+    <p>
+      After 3 seconds, if you haven't moved more than 50 meters, an alert will be displayed and an event will be sent to the server.<br>Once you have moved more than 200 meters, an alert will be displayed and ant event will be sent to the server.
+    </p>
 
-    <div id="AuthDiv" style="display:none">
+    <div id="longitude"><b>Longitude:</b> </div>
+    <div id="latitude"><b>Latitude:</b> </div>
+    <div id="timestamp"><b>Timestamp:</b> </div>
+  </div>
 
-      <p id="AuthInfo"></p>
-
-      <div id="AuthStep1Div">
-        <h3>Authentication Step 1</h3>
-        <input type="text" placeholder="Enter username" id="AuthUsername"/><br />
-        <input type="password" placeholder="Enter password" id="AuthPassword"/><br />
-        <input type="button" class="formButton" value="Submit" id="AuthStep1Submit" /><input type="button" class="AuthCancelButton" value="Cancel" />
-      </div>
-
-      <div id="AuthStep2Div">
-        <h3>Authentication Step 2</h3>
-        <p id="AuthQuestion"></p>
-        <input type="text" placeholder="Enter answer" id="AuthAnswer"/><br />
-        <input type="button" class="formButton" value="Submit" id="AuthStep2Submit" /><input type="button" class="AuthCancelButton" value="Cancel" />
-      </div>
-    </div>
-    </div>
     <script src="js/initOptions.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/DoubleStepAuthRealmChallengeProcessor.js"></script>
+    <!-- <script src="js/DoubleStepAuthRealmChallengeProcessor.js"></script> -->
     <script src="js/messages.js"></script>
   </body>
 
