@@ -15,18 +15,6 @@
 
 //* postAddOrder(id_customer, posisi, tujuan, harga, tanggal)
 
-function getCitiesWeather(){
-	var cityList = getCitiesList(); 
-	for (var i = 0; i < cityList.resultSet.length; i++) {
-		var yahooWeatherData = getCityWeather(cityList.resultSet[i].identifier);
-		
-		if (yahooWeatherData.isSuccessful)
-			cityList.resultSet[i].weather = yahooWeatherData.rss.channel.item.description;
-	}
-	return cityList;
-}
-
-
 var checkUsernamePasswordStatement = WL.Server.createSQLStatement("SELECT username, hak_akses, id_pengguna FROM login WHERE username=? AND password=?");
 function checkUsernamePassword(username,password) {
 	var user = WL.Server.invokeSQLStatement({
